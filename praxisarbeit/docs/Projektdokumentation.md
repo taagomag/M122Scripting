@@ -19,7 +19,6 @@ TODO: Definieren sie welche Parameter in welchen Konfigurationsdateien gespeiche
 
 script1.conf: 
 * default password
-* logfile path
 
 script2.conf: 
 * backup path
