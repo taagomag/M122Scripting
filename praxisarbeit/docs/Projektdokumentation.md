@@ -13,6 +13,7 @@ Das Skript muss manuell ausgeführt werden.
 Parameter:
 Via Inputfile - <username> <groupname> <vorname nachname>
 Via Configfile - <defaultpassword> 
+
 Skript 2:
 Das Skript wird einmal täglich automatisch per Cronjob ausgeführt.
 Parameter:
@@ -21,8 +22,10 @@ Via Configfile - <groupnameX> (alle zu sicherenden Gruppen) - <maxBackupCount> <
 
 
 ### Ablauf der Automation
-Script 1:
-\praxisarbeit\docs\Activity_CreateUser.drawio
+
+![Script 1 Activity Diagramm](../LB1/Activity_CreateUser_Hauser.png)
+
+![Script 2 Activity Diagramm](../LB1/M122_activityDiagram_Gordon.png)
 
 ### Konfigurationsdateien
 s
