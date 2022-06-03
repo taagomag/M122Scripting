@@ -30,7 +30,7 @@ Script 2:
 ![Script 2 Activity Diagramm](../LB1/Activity_Backup_Gordon.png)
 
 ### Konfigurationsdateien
-
+s
 Ein gemeinsames Configfile:
 <defaultpasswort>
 <groupname1>
@@ -48,7 +48,6 @@ script2.conf:
 * backup path
 * backup amount
 * exclude paths
-* execution date
 
 ## Abgrenzungen zum Lösungsdesign
 
