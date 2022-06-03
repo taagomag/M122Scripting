@@ -23,9 +23,11 @@ Via Configfile - <groupnameX> (alle zu sicherenden Gruppen) - <maxBackupCount> <
 
 ### Ablauf der Automation
 
+Script 1:
 ![Script 1 Activity Diagramm](../LB1/Activity_CreateUser_Hauser.png)
 
-![Script 2 Activity Diagramm](../LB1/M122_activityDiagram_Gordon.png)
+Script 2:
+![Script 2 Activity Diagramm](../LB1/Activity_Backup_Gordon.png)
 
 ### Konfigurationsdateien
 
