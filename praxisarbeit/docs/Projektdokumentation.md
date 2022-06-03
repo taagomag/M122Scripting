@@ -36,6 +36,15 @@ Ein gemeinsames Configfile:
 <backupName>
 <exludeFolders>
 
+script1.conf: 
+* default password
+
+script2.conf: 
+* backup path
+* backup amount
+* exclude paths
+* execution date
+
 ## Abgrenzungen zum Lösungsdesign
 
 TODO: Nachdem das Programm verwirklicht wurde, hier die Unterschiede von der Implementation zum Lösungsdesign beschreiben (was wurde anders gemacht, was wurde nicht gemacht, was wurde zusaetzlich gemacht)
