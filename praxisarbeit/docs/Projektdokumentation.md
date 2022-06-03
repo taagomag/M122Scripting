@@ -15,7 +15,8 @@ Via Inputfile - <username> <groupname> <vorname nachname>
 Via Configfile - <defaultpassword> 
 Skript 2:
 Das Skript wird einmal täglich automatisch per Cronjob ausgeführt.
-Parameter: 
+Parameter:
+Via Input
 Via Configfile - <groupnameX> (alle zu sicherenden Gruppen) - <maxBackupCount> <backupLocation> <backupName> <exludeFolders>
 
 
