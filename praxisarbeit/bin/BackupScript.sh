@@ -65,6 +65,12 @@ echo "Running"
 
 # done < $INPUT_FILE
 
+groupNameNotExists() {
+  echo $1
+  grep -v $1 $GROUPS_TO_BACKUP > $GROUPS_TO_BACKUP
+  echo "Group name $1 does not exist"
+}
+
 while read -r groupName;
 do
     echo groupName: $groupName
@@ -75,11 +81,7 @@ do
     fi
 done < $GROUPS_TO_BACKUP
 
-groupNameNotExists() {
-  echo $1
-  grep -v $1 $GROUPS_TO_BACKUP > $GROUPS_TO_BACKUP
-  echo "Group name $1 does not exist"
-}
+
 
 
 
