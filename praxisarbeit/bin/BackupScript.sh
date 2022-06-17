@@ -81,6 +81,8 @@ groupNameNotExists() {
   echo "Group name $1 does not exist"
 }
 
+
+
 # //Condition check if group from BackupGroupName.txt file exists on system
 # //else remove from txt file and throw error
 # //exit while loop if all entries are checked
