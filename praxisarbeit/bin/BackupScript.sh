@@ -12,6 +12,7 @@ GROUPS_TO_BACKUP=$BINDIR/../var/groupsToBackup.txt
 
 . $BINDIR/common_functions.bash
 
+echo "Running"
 # cat $1 | while read user name vorname; do
 # 	echo User: $user
 # 	echo Vorname: $vorname
