@@ -71,17 +71,20 @@ do
     if [ $(getent group $groupName) ]; then
         echo "$groupName exists."
     else
-        echo "group does not exist."
-        sed $groupName $GROUPS_TO_BACKUP
-
+        groupNameNotExists $groupName
     fi
 done < $GROUPS_TO_BACKUP
 
+groupNameNotExists() {
+  echo $1
+  grep -v $1 $GROUPS_TO_BACKUP > $GROUPS_TO_BACKUP
+  echo "Group name $1 does not exist"
+}
 
-//Condition check if group from BackupGroupName.txt file exists on system
-//else remove from txt file and throw error
-//exit while loop if all entries are checked
+# //Condition check if group from BackupGroupName.txt file exists on system
+# //else remove from txt file and throw error
+# //exit while loop if all entries are checked
 
-//while loop which gets all users from each groupname and get its home directory
-//and add it to Backuplist.txt file
-//exit if all groups are looped
+# //while loop which gets all users from each groupname and get its home directory
+# //and add it to Backuplist.txt file
+# //exit if all groups are looped
