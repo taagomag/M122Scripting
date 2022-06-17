@@ -67,7 +67,7 @@ echo "Running"
 
 groupNameNotExists() {
   echo $1
-  tmpfile=$(mktemp)
+  tmpfile=$(mktemp ../tmp/tmpfile.txt)
   grep -v $1 $GROUPS_TO_BACKUP > tmpfile && mv tmpfile $GROUPS_TO_BACKUP
   rm $tmpfile
   echo "Group name $1 does not exist"
