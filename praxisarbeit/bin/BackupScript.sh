@@ -3,7 +3,7 @@ cwd=`pwd`		# current working directory
 cd `dirname $0`	# change to the directory where the script is located
 BINDIR=`pwd`	# BINDIR: the directory where the script is located
 cd $cwd		# return to the working directory
-BASENAME=`BackupScript.sh $0`	# Set the script name (without path to it)
+BASENAME=`basename $0`	# Set the script name (without path to it)
 TMPDIR=/tmp/$BASENAME.$$	# Set a temporary directory if needed
 ETCDIR=$BINDIR/../etc		# ETCDIR is the config directory
 GROUPS_TO_BACKUP=$BINDIR/../var/groupsToBackup.txt
