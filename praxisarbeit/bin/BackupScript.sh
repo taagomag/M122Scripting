@@ -5,8 +5,9 @@ BINDIR=`pwd`	# BINDIR: the directory where the script is located
 cd $cwd		# return to the working directory
 BASENAME=`basename $0`	# Set the script name (without path to it)
 TMPDIR=/tmp/$BASENAME.$$	# Set a temporary directory if needed
-ETCDIR=$BINDIR/../etc/config.env		# ETCDIR is the config directory
+ETCDIR=$BINDIR/../etc		# ETCDIR is the config directory
 GROUPS_TO_BACKUP=$BINDIR/../var/groupsToBackup.txt
+GROUP_EXISTS=$(getent group $groupName)
 
 . $ETCDIR/$BASENAME.env	# run config file “Scriptname”.env
 
@@ -76,7 +77,7 @@ groupNameNotExists() {
 while read -r groupName;
 do
     echo groupName: $groupName
-    if [ $(getent group $groupName) ]; then
+    if [ $GROUP_EXISTS ]; then
         echo "$groupName exists."
     else
         groupNameNotExists $groupName
