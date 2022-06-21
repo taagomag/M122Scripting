@@ -84,7 +84,7 @@ do
     fi
 done < $GROUPS_TO_BACKUP
 
-
+echo "script finished"
 
 
 
