@@ -7,7 +7,6 @@ BASENAME=`basename $0`	# Set the script name (without path to it)
 TMPDIR=/tmp/$BASENAME.$$	# Set a temporary directory if needed
 ETCDIR=$BINDIR/../etc		# ETCDIR is the config directory
 GROUPS_TO_BACKUP=$BINDIR/../var/groupsToBackup.txt
-GROUP_EXISTS=$(getent group $groupName)
 
 #. $ETCDIR/$BASENAME.env	# run config file “Scriptname”.env
 
@@ -26,7 +25,7 @@ groupNameNotExists() {
 while read -r groupName;
 do
     echo groupName: $groupName
-    if [ $GROUP_EXISTS ]; then
+    if [ $(getent group $groupName) ]; then
         echo "$groupName exists."
     else
         groupNameNotExists $groupName
@@ -36,7 +35,7 @@ done < $GROUPS_TO_BACKUP
 
 
 
-while read - groupName;
+while read -r groupName;
 do
     users=getent group $groupName | cut -d ':' -f 4
     echo users: $users
