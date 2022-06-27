@@ -14,6 +14,54 @@ GROUP_EXISTS=$(getent group $groupName)
 #. $BINDIR/common_functions.bash
 
 echo "Running"
+
+groupNameNotExists() {
+  echo $1
+  tmpfile=$(mktemp ../tmp/tmpfile.txt)
+  grep -v $1 $GROUPS_TO_BACKUP > tmpfile && mv tmpfile $GROUPS_TO_BACKUP
+  rm $tmpfile
+  echo "Group name $1 does not exist"
+}
+
+while read -r groupName;
+do
+    echo groupName: $groupName
+    if [ $GROUP_EXISTS ]; then
+        echo "$groupName exists."
+    else
+        groupNameNotExists $groupName
+    fi
+done < $GROUPS_TO_BACKUP
+
+
+
+
+while read - groupName;
+do
+    users=getent group $groupName | cut -d ':' -f 4
+    echo users: $users
+done < $GROUPS_TO_BACKUP
+
+
+echo "script finished"
+
+# $ getent group wheel # get group, returns non-zero exit code if not found
+
+# > wheel:x:10:test,user1
+
+# $ getent group wheel | cut -d ':' -f 4 # get user names
+
+# > test,user1
+
+# $ getent passwd test # get user info
+
+# > test:x:1000:1000:test:/home/test:/bin/bash
+
+# $ getent passwd test | cut -d ':' -f 6 # get user home dir
+
+# > /home/test
+
+
 # cat $1 | while read user name vorname; do
 # 	echo User: $user
 # 	echo Vorname: $vorname
@@ -40,21 +88,6 @@ echo "Running"
 # done
 
 
-# $ getent group wheel # get group, returns non-zero exit code if not found
-
-# > wheel:x:10:test,user1
-
-# $ getent group wheel | cut -d ':' -f 4 # get user names
-
-# > test,user1
-
-# $ getent passwd test # get user info
-
-# > test:x:1000:1000:test:/home/test:/bin/bash
-
-# $ getent passwd test | cut -d ':' -f 6 # get user home dir
-
-# > /home/test
 
 
 
@@ -65,26 +98,6 @@ echo "Running"
 # # user var group here
 
 # done < $INPUT_FILE
-
-groupNameNotExists() {
-  echo $1
-  tmpfile=$(mktemp ../tmp/tmpfile.txt)
-  grep -v $1 $GROUPS_TO_BACKUP > tmpfile && mv tmpfile $GROUPS_TO_BACKUP
-  rm $tmpfile
-  echo "Group name $1 does not exist"
-}
-
-while read -r groupName;
-do
-    echo groupName: $groupName
-    if [ $GROUP_EXISTS ]; then
-        echo "$groupName exists."
-    else
-        groupNameNotExists $groupName
-    fi
-done < $GROUPS_TO_BACKUP
-
-echo "script finished"
 
 
 
