@@ -9,7 +9,7 @@ ETCDIR=$BINDIR/../etc		# ETCDIR is the config directory
 GROUPS_TO_BACKUP=$BINDIR/../var/groupsToBackup.txt
 GROUP_EXISTS=$(getent group $groupName)
 
-. $ETCDIR/$BASENAME.env	# run config file “Scriptname”.env
+#. $ETCDIR/$BASENAME.env	# run config file “Scriptname”.env
 
 #. $BINDIR/common_functions.bash
 
