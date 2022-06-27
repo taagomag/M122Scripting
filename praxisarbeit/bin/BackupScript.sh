@@ -8,9 +8,9 @@ TMPDIR=/tmp/$BASENAME.$$	# Set a temporary directory if needed
 ETCDIR=$BINDIR/../etc		# ETCDIR is the config directory
 GROUPS_TO_BACKUP=$BINDIR/../var/groupsToBackup.txt
 
-#. $ETCDIR/$BASENAME.env	# run config file “Scriptname”.env
+. $ETCDIR/$BASENAME.env	# run config file “Scriptname”.env
 
-#. $BINDIR/common_functions.bash
+. $BINDIR/common_functions.bash
 
 echo "Running"
 
@@ -37,7 +37,7 @@ done < $GROUPS_TO_BACKUP
 
 while read -r groupName;
 do
-    users=getent group $groupName | cut -d ':' -f 4
+    users = getent group $groupName | cut -d ':' -f 4
     echo users: $users
 done < $GROUPS_TO_BACKUP
 
