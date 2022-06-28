@@ -34,6 +34,11 @@ while read -r groupName;
 do
     users=$(getent group $groupName | cut -d ':' -f 4)
     echo $users
+    IFS=, for user in $users
+    do
+        userHomedirectory=$(getent passwd $user | cut -d ':' -f 6)
+        echo $userHomedirectory
+    done
 done < $GROUPS_TO_BACKUP
 
 
