@@ -8,7 +8,7 @@ TMPDIR=/tmp/$BASENAME.$$	# Set a temporary directory if needed
 ETCDIR=$BINDIR/../etc/config.env		# ETCDIR is the config directory
 GROUPS_TO_BACKUP=$BINDIR/../var/groupsToBackup.txt
 TMPFILE=../tmp/tmpfile.txt
-BACKUP_DIR=./backups
+BACKUP_DIR=backups
 BACKUPLIST=../var/backuplist.txt #Backuplist were all home directories are saved
 . $ETCDIR # run config file “Scriptname”.env
 
