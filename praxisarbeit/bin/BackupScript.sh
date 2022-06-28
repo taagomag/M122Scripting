@@ -39,7 +39,7 @@ function loopUsersForHomeDirectory {
 function saveHomeDirectoryToBackuplist {
     echo "test in saveHome"
     echo $1
-    "$1" >> $BACKUPLIST
+    "$1" > $BACKUPLIST
     awk -F: '{print $1":" $6}' $2 >> $BACKUPLIST
     cat $BACKUPLIST
     echo "backuplist down"
