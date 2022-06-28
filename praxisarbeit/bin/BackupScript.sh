@@ -8,6 +8,7 @@ TMPDIR=/tmp/$BASENAME.$$	# Set a temporary directory if needed
 ETCDIR=$BINDIR/../etc/config.env		# ETCDIR is the config directory
 GROUPS_TO_BACKUP=$BINDIR/../var/groupsToBackup.txt
 TMPFILE=../tmp/tmpfile.txt
+BACKUPLIST=../var/backuplist.txt #Backuplist were all home directories are saved
 . $ETCDIR # run config file “Scriptname”.env
 
 echo "Running"
@@ -25,9 +26,17 @@ function loopUsersForHomeDirectory {
     IFS=,
     for user in $users
         do
-            echo $user
+            homeDirectory=$(getent passwd test | cut -d ':' -f 6)
+            echo $homeDirectory
+            toSave=$($user: $homeDirectory)
+            echo $toSave
+            saveHomeDirectoryToBackuplist $toSave
         done
     IFS=$Backup_of_internal_field_separator
+}
+
+function saveHomeDirectoryToBackuplist {
+    $1 >> $BACKUPLIST
 }
 
 
