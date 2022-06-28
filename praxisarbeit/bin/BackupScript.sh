@@ -40,6 +40,9 @@ function saveHomeDirectoryToBackuplist {
     echo "test in saveHome"
     echo $1
     "$1" >> $BACKUPLIST
+    echo "backuplist down"
+    cat $BACKUPLIST
+    echo $BACKUPLIST
     echo "test nachher"
 }
 
