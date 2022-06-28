@@ -8,6 +8,7 @@ TMPDIR=/tmp/$BASENAME.$$	# Set a temporary directory if needed
 ETCDIR=$BINDIR/../etc/config.env		# ETCDIR is the config directory
 GROUPS_TO_BACKUP=$BINDIR/../var/groupsToBackup.txt
 TMPFILE=../tmp/tmpfile.txt
+BACKUP_DIR=../
 BACKUPLIST=../var/backuplist.txt #Backuplist were all home directories are saved
 . $ETCDIR # run config file “Scriptname”.env
 
@@ -32,6 +33,9 @@ function loopUsersForHomeDirectory {
     IFS=$Backup_of_internal_field_separator
 }
 
+function saveToTar {
+
+}
 
 while read -r groupName;
 do
@@ -49,6 +53,16 @@ do
     loopUsersForHomeDirectory $groupName
 done < $GROUPS_TO_BACKUP
 
+
+while true; do
+    read -p "Please enter a backup file name: " backupFileName
+    read -p "The the backup file name is $backupFileName ?" yn
+    case $yn in
+        [Yy]* ) echo $backupFileName; break;;
+        [Nn]* ) exit;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
 
 echo "script finished"
 
