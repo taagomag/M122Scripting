@@ -26,18 +26,10 @@ function loopUsersForHomeDirectory {
     IFS=,
     for user in $users
         do
-            echo "test vor dir"
             homeDirectory=$(getent passwd $user | cut -d ':' -f 6)
-            echo "test nach dir"
-            echo $homeDirectory
-
-            saveHomeDirectoryToBackuplist $homeDirectory $user
+            echo $user ":" $homeDirectory >> $BACKUPLIST
         done
     IFS=$Backup_of_internal_field_separator
-}
-
-function saveHomeDirectoryToBackuplist {
-    echo print $2 ":" $1 >> $BACKUPLIST
 }
 
 
