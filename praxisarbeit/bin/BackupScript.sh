@@ -35,6 +35,7 @@ function loopUsersForHomeDirectory {
 
 function createBackup {
     archievFileName=$1_date +'%m%d%Y'
+    echo archievFileName
 }
 
 
@@ -65,7 +66,6 @@ while true; do
     esac
 done
 
-echo createBackup
 
 echo "script finished"
 
