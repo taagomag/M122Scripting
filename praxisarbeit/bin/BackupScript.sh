@@ -34,8 +34,10 @@ function loopUsersForHomeDirectory {
 }
 
 function createBackup {
-    archievFileName=$1_date +'%m%d%Y'
-    echo $archievFileName
+    day=$(date +'%m%d%Y')
+    name=$1
+    archive_file="$name-$day.tgz"
+    echo $archiveFile
 }
 
 
