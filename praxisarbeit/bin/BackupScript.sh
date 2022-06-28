@@ -37,7 +37,7 @@ function loopUsersForHomeDirectory {
 }
 
 function saveHomeDirectoryToBackuplist {
-    echo '{print $2":" $1}' >> $BACKUPLIST
+    echo print $2 ":" $1 >> $BACKUPLIST
 }
 
 
