@@ -19,6 +19,16 @@ function groupNameNotExists {
   echo "Group name $1 does not exist"
 }
 
+function loopUsersForHomeDirectory {
+    users=$(getent group $1 | cut -d ':' -f 4)
+    Backup_of_internal_field_separator=$IFS
+    IFS=,
+    for user in $users
+        do
+            echo $user
+        done
+    IFS=$Backup_of_internal_field_separator
+}
 
 
 while read -r groupName;
@@ -34,16 +44,7 @@ done < $GROUPS_TO_BACKUP
 
 while read -r groupName;
 do
-    users=$(getent group $groupName | cut -d ':' -f 4)
-    echo $users
-    Backup_of_internal_field_separator=$IFS
-    IFS=,
-    for user in $users
-        do
-            echo $user
-        done
-    IFS=$Backup_of_internal_field_separator
-
+    loopUsersForHomeDirectory $groupName
 done < $GROUPS_TO_BACKUP
 
 
