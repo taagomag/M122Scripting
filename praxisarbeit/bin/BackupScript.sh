@@ -32,8 +32,7 @@ done < $GROUPS_TO_BACKUP
 
 while read -r groupName;
 do
-    users = $(getent group $groupName | cut -d ':' -f 4)
-    echo $users
+    echo $(getent group $groupName | cut -d ':' -f 4)
 done < $GROUPS_TO_BACKUP
 
 
