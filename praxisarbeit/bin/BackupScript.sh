@@ -7,15 +7,15 @@ BASENAME=`basename $0`	# Set the script name (without path to it)
 TMPDIR=/tmp/$BASENAME.$$	# Set a temporary directory if needed
 ETCDIR=$BINDIR/../etc/config.env		# ETCDIR is the config directory
 GROUPS_TO_BACKUP=$BINDIR/../var/groupsToBackup.txt
+TMPFILE=../tmp/tmpfile.txt
 . $ETCDIR # run config file “Scriptname”.env
 
 echo "Running"
 
 groupNameNotExists() {
   echo $1
-  TMPFILE=$(mktemp ../tmp/tmpfile.txt)
   grep -v $1 $GROUPS_TO_BACKUP > tmpfile && mv tmpfile $GROUPS_TO_BACKUP
-  rm $TMPFILE
+  : > $TMPFILE
   echo "Group name $1 does not exist"
 }
 
