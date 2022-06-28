@@ -12,7 +12,7 @@ TMPFILE=../tmp/tmpfile.txt
 
 echo "Running"
 
-function groupNameNotExists{
+function groupNameNotExists {
   echo $1
   grep -v $1 $GROUPS_TO_BACKUP > tmpfile && mv tmpfile $GROUPS_TO_BACKUP
   : > $TMPFILE
