@@ -34,10 +34,14 @@ while read -r groupName;
 do
     users=$(getent group $groupName | cut -d ':' -f 4)
     echo $users
-    IFS=, for user in $users
-    echo "test"
-    echo $user
-    echo "test $user"
+    Backup_of_internal_field_separator=$IFS
+    IFS=,
+    for user in $users
+        do
+            echo $user
+        done
+    IFS=$Backup_of_internal_field_separator
+
 done < $GROUPS_TO_BACKUP
 
 
