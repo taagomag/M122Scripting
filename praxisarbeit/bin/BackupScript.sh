@@ -35,7 +35,7 @@ function loopUsersForHomeDirectory {
 
 function createBackup {
     archievFileName=$1_date +'%m%d%Y'
-    echo archievFileName
+    echo $archievFileName
 }
 
 
