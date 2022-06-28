@@ -26,7 +26,7 @@ function loopUsersForHomeDirectory {
     IFS=,
     for user in $users
         do
-            homeDirectory=$(getent passwd test | cut -d ':' -f 6)
+            homeDirectory=$(getent passwd $user | cut -d ':' -f 6)
             echo $homeDirectory
 
             saveHomeDirectoryToBackuplist $homeDirectory
