@@ -8,7 +8,7 @@ TMPDIR=/tmp/$BASENAME.$$	# Set a temporary directory if needed
 ETCDIR=$BINDIR/../etc/config.env		# ETCDIR is the config directory
 GROUPS_TO_BACKUP=$BINDIR/../var/groupsToBackup.txt
 TMPFILE=../tmp/tmpfile.txt
-BACKUP_DIR=../
+BACKUP_DIR=../backups
 BACKUPLIST=../var/backuplist.txt #Backuplist were all home directories are saved
 . $ETCDIR # run config file “Scriptname”.env
 
@@ -38,6 +38,14 @@ function createBackup {
     name=$1
     archiveFile="$name-$day.tgz"
     echo $archiveFile
+    echo "Backing up $BACKUPLIST to $BACKUP_DIR/$archiveFile"
+    date
+    echo
+    tar czf $BACKUP_DIR/$archiveFile $BACKUPLIST
+    echo
+    echo "Backup finished"
+    date
+    ls -lh $BACKUP_DIR
 }
 
 
