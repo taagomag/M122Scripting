@@ -28,9 +28,8 @@ function loopUsersForHomeDirectory {
         do
             homeDirectory=$(getent passwd test | cut -d ':' -f 6)
             echo $homeDirectory
-            toSave=$($user: $homeDirectory)
-            echo $toSave
-            saveHomeDirectoryToBackuplist $toSave
+
+            saveHomeDirectoryToBackuplist $homeDirectory
         done
     IFS=$Backup_of_internal_field_separator
 }
