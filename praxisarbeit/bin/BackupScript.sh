@@ -38,6 +38,7 @@ function loopUsersForHomeDirectory {
 
 function saveHomeDirectoryToBackuplist {
     echo "test in saveHome"
+    echo $1
     "$1" >> $BACKUPLIST
     echo "test nachher"
 }
