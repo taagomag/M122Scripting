@@ -5,12 +5,9 @@ BINDIR=`pwd`	# BINDIR: the directory where the script is located
 cd $cwd		# return to the working directory
 BASENAME=`basename $0`	# Set the script name (without path to it)
 TMPDIR=/tmp/$BASENAME.$$	# Set a temporary directory if needed
-ETCDIR=$BINDIR/../etc		# ETCDIR is the config directory
+ETCDIR=$BINDIR/../etc/config.env		# ETCDIR is the config directory
 GROUPS_TO_BACKUP=$BINDIR/../var/groupsToBackup.txt
-
-. $ETCDIR/config.env	# run config file “Scriptname”.env
-
-#. $BINDIR/common_functions.bash
+. $ETCDIR # run config file “Scriptname”.env
 
 echo "Running"
 
@@ -73,8 +70,6 @@ echo "script finished"
 #   echo “maximumentries: maximale Anzahl..(default:100)” >&2
 #   exit 2
 # }
-
-
 # while getopts s:d:n:oN optvar ; do
 #    case $optvar in
 #  	d) DEST_SID="${OPTARG}" ;;
@@ -85,20 +80,18 @@ echo "script finished"
 #  	*) usage ;;
 #    esac
 # done
-
-
-
-
-
+# $ getent group wheel # get group, returns non-zero exit code if not found
+# > wheel:x:10:test,user1
+# $ getent group wheel | cut -d ':' -f 4 # get user names
+# > test,user1
+# $ getent passwd test # get user info
+# > test:x:1000:1000:test:/home/test:/bin/bash
+# $ getent passwd test | cut -d ':' -f 6 # get user home dir
+# > /home/test
 # Read a file line by line:
-
 # while IFS= read -r group; do
-
 # # user var group here
-
 # done < $INPUT_FILE
-
-
 
 # //Condition check if group from BackupGroupName.txt file exists on system
 # //else remove from txt file and throw error
