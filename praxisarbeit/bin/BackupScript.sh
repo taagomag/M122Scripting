@@ -31,7 +31,7 @@ function loopUsersForHomeDirectory {
             echo "test nach dir"
             echo $homeDirectory
 
-            saveHomeDirectoryToBackuplist $homeDirectory
+            saveHomeDirectoryToBackuplist $homeDirectory $user
         done
     IFS=$Backup_of_internal_field_separator
 }
@@ -40,6 +40,8 @@ function saveHomeDirectoryToBackuplist {
     echo "test in saveHome"
     echo $1
     "$1" >> $BACKUPLIST
+    awk -F: '{print $1":" $6}' $2 >> $BACKUPLIST
+    cat $BACKUPLIST
     echo "backuplist down"
     cat $BACKUPLIST
     echo $BACKUPLIST
