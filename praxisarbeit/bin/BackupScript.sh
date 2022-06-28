@@ -33,6 +33,10 @@ function loopUsersForHomeDirectory {
     IFS=$Backup_of_internal_field_separator
 }
 
+function createBackup {
+    archievFileName=$1_date +'%m%d%Y'
+}
+
 
 while read -r groupName;
 do
@@ -53,13 +57,15 @@ done < $GROUPS_TO_BACKUP
 
 while true; do
     read -p "Please enter a backup file name: " backupFileName
-    read -p "The the backup file name is $backupFileName ?" yn
+    read -p "The the backup file name is $backupFileName (y/n) ?" yn
     case $yn in
-        [Yy]* ) echo $backupFileName; break;;
+        [Yy]* ) createBackup $backupFileName; break;;
         [Nn]* ) exit;;
         * ) echo "Please answer yes or no.";;
     esac
 done
+
+echo createBackup
 
 echo "script finished"
 
