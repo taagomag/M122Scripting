@@ -33,9 +33,6 @@ function loopUsersForHomeDirectory {
     IFS=$Backup_of_internal_field_separator
 }
 
-function saveToTar {
-
-}
 
 while read -r groupName;
 do
