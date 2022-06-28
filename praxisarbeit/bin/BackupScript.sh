@@ -12,12 +12,14 @@ TMPFILE=../tmp/tmpfile.txt
 
 echo "Running"
 
-groupNameNotExists() {
+function groupNameNotExists{
   echo $1
   grep -v $1 $GROUPS_TO_BACKUP > tmpfile && mv tmpfile $GROUPS_TO_BACKUP
   : > $TMPFILE
   echo "Group name $1 does not exist"
 }
+
+
 
 while read -r groupName;
 do
