@@ -38,10 +38,6 @@ do
     echo "test"
     echo $user
     echo "test $user"
-    do
-        userHomedirectory=$(getent passwd $user | cut -d ':' -f 6)
-        echo $userHomedirectory
-    done
 done < $GROUPS_TO_BACKUP
 
 
