@@ -37,12 +37,7 @@ function loopUsersForHomeDirectory {
 }
 
 function saveHomeDirectoryToBackuplist {
-    echo "test in saveHome"
-    echo $1
-    homeDirectoryToSave=$1
-    echo $homeDirectoryToSave >> $BACKUPLIST
-    #awk -F: '{print $1":" $6}' $2 >> $BACKUPLIST
-    #cat $BACKUPLIST
+    echo '{print $2":" $1}' >> $BACKUPLIST
 }
 
 
