@@ -35,6 +35,9 @@ do
     users=$(getent group $groupName | cut -d ':' -f 4)
     echo $users
     IFS=, for user in $users
+    echo "test"
+    echo $user
+    echo "test $user"
     do
         userHomedirectory=$(getent passwd $user | cut -d ':' -f 6)
         echo $userHomedirectory
