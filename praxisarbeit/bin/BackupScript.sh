@@ -40,7 +40,7 @@ function saveHomeDirectoryToBackuplist {
     echo "test in saveHome"
     echo $1
     homeDirectoryToSave=$1
-    $homeDirectoryToSave > $BACKUPLIST
+    echo $homeDirectoryToSave >> $BACKUPLIST
     #awk -F: '{print $1":" $6}' $2 >> $BACKUPLIST
     #cat $BACKUPLIST
 }
