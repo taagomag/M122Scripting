@@ -1,4 +1,9 @@
-#!/bin/bash
+import os
+import time
+
+curDir = os.getcwd()
+
+print(curDir)
 
 #read the name of base dir with $1
 #throw error if no base dir was specified or no base dir existierendes
