@@ -3,7 +3,7 @@ import time
 import csv
 
 curDir = os.getcwd()
-running = True
+running = True  
 
 #get name of base Directory
 inputDir = str(input("Which base directory would like to search: "))
@@ -12,17 +12,18 @@ print(inputDir)
 
 while running:
   if os.path.isdir(baseDirectory):
-  print("folder exists")
-  # requesting a name for the output file
-  outputFileName = str(input("What should the output file name be called: "))
-  # checking if base directory is empty
-  dir = os.listdir(baseDirectory)
+    print("folder exists")
+    # requesting a name for the output file
+    outputFileName = str(input("What should the output file name be called: "))
+    # checking if base directory is empty
+    dir = os.listdir(baseDirectory)
   if len(dir) == 0:
     print("base directory is empty")
 
   else:
     print("base directory has repositories")
-
+    for repoName in dir:
+      print(repoName)
 else:
   print("folder does not exist")
 
