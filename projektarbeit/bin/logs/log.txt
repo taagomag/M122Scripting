@@ -1,0 +1,10 @@
+INFO:root:Checking arguments
+INFO:root:Checking Base Directory
+INFO:root:getting and writting commits to csv file
+DEBUG:git.util:Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'Das System kann die angegebene Datei nicht finden', None, 2, None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\repo\M223_JavaSpringBoot, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:git.cmd:Popen(['git', 'rev-list', 'b7115b7d4ec6bd23dedb0bb538db7afbdaf7ebf5', '--'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\repo\M223_JavaSpringBoot, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\repo\M223_JavaSpringBoot, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\repo\TrailyChallengeMax, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:git.cmd:Popen(['git', 'rev-list', '69dc5780da1a34dea3a72d272ea134bb83e800b1', '--'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\repo\TrailyChallengeMax, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\repo\TrailyChallengeMax, universal_newlines=False, shell=None, istream=<valid stream>)

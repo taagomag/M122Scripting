@@ -5,7 +5,9 @@ import os
 import csv
 import git
 import sys
+import logging
 
+logging.basicConfig(filename="logs/log.txt", level=logging.NOTSET)
 curDir = os.getcwd()
 running = True  
 baseDirectory = sys.argv[1]
@@ -15,23 +17,28 @@ csvHeaderRow = ['Zielverzeichnis','Datum','Commit-Hash','Author']
 
 #Checking if both arguments have been passed
 def checkArgs(): 
+  logging.info('Checking arguments')
   if len(sys.argv) == 3:
     return True
   else:
+    logging.error('Wrong number of arguments')
     print("Please pass 2 arguments")
     sys.exit(1)
 
 # Check if given Base Directory exists
 def checkBaseDirectoryExists(): 
+  logging.info('Checking Base Directory')
   if (os.path.exists(baseDirectory)):
     print ("Base directory exists: ", os.path.exists(baseDirectory))
     return True
   else:
+    logging.error('No Base Directory exists')
     print("base directory does not exist")
     sys.exit(1)
 
 # Getting all git commits of each Repository and writing them to a csv file
 def getAndWriteToCSV():
+  logging.info('getting and writting commits to csv file')
   with open(outputDirectory, 'w', newline='\n') as csvfile:
     CSV_WRITER = csv.writer(csvfile, delimiter=',')
     CSV_WRITER.writerow(csvHeaderRow) # Here I'm setting the heading of the new csv file
@@ -47,6 +54,7 @@ def main():
     getAndWriteToCSV()
     print("writing commits to csv was succeful!")
     sys.exit(0)
+
 if __name__== "__main__":
     main()
 else:
