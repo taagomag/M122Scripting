@@ -4,8 +4,6 @@
 
 import os
 import csv
-from git import Repo
-from os import path
 import git
 import sys
 
@@ -34,8 +32,6 @@ def checkBaseDirectoryExists():
     sys.exit(1)
 
 # Getting all git commits of each Repository and writing them to a csv file
-
-
 def getAndWriteToCSV():
   with open(outputDirectory, 'w', newline='\n') as csvfile:
     CSV_WRITER = csv.writer(csvfile, delimiter=',')
