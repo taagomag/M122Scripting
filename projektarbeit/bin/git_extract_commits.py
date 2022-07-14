@@ -10,7 +10,6 @@ import git
 import sys
 
 curDir = os.getcwd()
-print(curDir)
 running = True  
 baseDirectory = sys.argv[1]
 outputFileName = sys.argv[2]
@@ -22,7 +21,7 @@ def checkArgs():
   if len(sys.argv) == 3:
     return True
   else:
-    print("Please pass both arguments")
+    print("Please pass 2 arguments")
     sys.exit(1)
 
 # Check if given Base Directory exists
@@ -34,10 +33,10 @@ def checkBaseDirectoryExists():
     print("base directory does not exist")
     sys.exit(1)
 
-# Getting all git commits of each Repository
+# Getting all git commits of each Repository and writing them to a csv file
 
 
-def writeToCSV():
+def getAndWriteToCSV():
   with open(outputDirectory, 'w', newline='\n') as csvfile:
     CSV_WRITER = csv.writer(csvfile, delimiter=',')
     CSV_WRITER.writerow(csvHeaderRow) # Here I'm setting the heading of the new csv file
@@ -50,8 +49,9 @@ def writeToCSV():
 # Main program function
 def main(): 
   if(checkArgs() and checkBaseDirectoryExists()):
-    writeToCSV()
-
+    getAndWriteToCSV()
+    print("writing commits to csv was succeful!")
+    sys.exit(0)
 if __name__== "__main__":
     main()
 else:
