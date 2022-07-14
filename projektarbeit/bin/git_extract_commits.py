@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-# install GitPython, pip install GitPython
 
 import os
 import csv
