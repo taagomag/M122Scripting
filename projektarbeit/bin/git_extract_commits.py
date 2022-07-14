@@ -9,7 +9,6 @@ import logging
 
 logging.basicConfig(filename="logs/log.txt", level=logging.NOTSET)
 curDir = os.getcwd()
-running = True  
 baseDirectory = sys.argv[1]
 outputFileName = sys.argv[2]
 outputDirectory = os.path.join(curDir, '..', 'tmp', outputFileName + '.csv')
