@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 
+from datetime import date
 import os
 import csv
 import git
@@ -37,6 +38,7 @@ def checkBaseDirectoryExists():
 
 # Getting all git commits of each Repository and writing them to a csv file
 def getAndWriteToCSV():
+
   logging.info('getting and writting commits to csv file')
   with open(outputDirectory, 'w', newline='\n') as csvfile:
     CSV_WRITER = csv.writer(csvfile, delimiter=',')
@@ -44,8 +46,10 @@ def getAndWriteToCSV():
     for repoName in os.listdir(baseDirectory): # Looping through the basedirectory with all repos
       bare_repo = git.Repo(os.path.join(baseDirectory, repoName)) #with git.Repo i can create the repo path for the extraction of the commits
       for commit in bare_repo.iter_commits(): # To write the commits to the csv file I used the csv writer
-        csvfile.write("%s %s %s %s" % (repoName, commit.committed_date, commit.hexsha, commit.author))
-        csvfile.write(';\n')
+        d = commit.committed_datetime
+        str_date_time = date(d.year, d.month, d.day)
+        csvfile.write("%s,%s,%s,%s" % (repoName, str_date_time , commit.hexsha, commit.author))
+        csvfile.write('\n')
 
 # Main program function
 def main(): 

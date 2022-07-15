@@ -8,3 +8,75 @@ DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch'], cwd=D:\M122\newScript\M122Sc
 DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\repo\TrailyChallengeMax, universal_newlines=False, shell=None, istream=<valid stream>)
 DEBUG:git.cmd:Popen(['git', 'rev-list', '69dc5780da1a34dea3a72d272ea134bb83e800b1', '--'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\repo\TrailyChallengeMax, universal_newlines=False, shell=None, istream=None)
 DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\repo\TrailyChallengeMax, universal_newlines=False, shell=None, istream=<valid stream>)
+INFO:root:Checking arguments
+INFO:root:Checking Base Directory
+INFO:root:getting and writting commits to csv file
+DEBUG:git.util:Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'Das System kann die angegebene Datei nicht finden', None, 2, None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\repo\M223_JavaSpringBoot, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:git.cmd:Popen(['git', 'rev-list', 'b7115b7d4ec6bd23dedb0bb538db7afbdaf7ebf5', '--'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\repo\M223_JavaSpringBoot, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\repo\M223_JavaSpringBoot, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\repo\TrailyChallengeMax, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:git.cmd:Popen(['git', 'rev-list', '69dc5780da1a34dea3a72d272ea134bb83e800b1', '--'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\repo\TrailyChallengeMax, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\repo\TrailyChallengeMax, universal_newlines=False, shell=None, istream=<valid stream>)
+INFO:root:Checking arguments
+INFO:root:Checking Base Directory
+INFO:root:getting and writting commits to csv file
+DEBUG:git.util:Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'Das System kann die angegebene Datei nicht finden', None, 2, None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\testrepos\chromedriver, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:git.cmd:Popen(['git', 'rev-list', 'b2e804e977c9cf3dd9c845474752cac142a72508', '--'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\testrepos\chromedriver, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\testrepos\chromedriver, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\testrepos\gridfs_stream, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:git.cmd:Popen(['git', 'rev-list', '879f6e03bb4a0a31716b3cd7c31c03ce0ab7f638', '--'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\testrepos\gridfs_stream, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\testrepos\gridfs_stream, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\testrepos\videostreamer, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:git.cmd:Popen(['git', 'rev-list', '4bcf87e6a3db59e8d1663340a395e578000ba0ef', '--'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\testrepos\videostreamer, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\testrepos\videostreamer, universal_newlines=False, shell=None, istream=<valid stream>)
+INFO:root:Checking arguments
+INFO:root:Checking Base Directory
+INFO:root:getting and writting commits to csv file
+DEBUG:git.util:Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'Das System kann die angegebene Datei nicht finden', None, 2, None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\testrepos\chromedriver, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:git.cmd:Popen(['git', 'rev-list', 'b2e804e977c9cf3dd9c845474752cac142a72508', '--'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\testrepos\chromedriver, universal_newlines=False, shell=None, istream=None)
+INFO:root:Checking arguments
+INFO:root:Checking Base Directory
+INFO:root:getting and writting commits to csv file
+DEBUG:git.util:Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'Das System kann die angegebene Datei nicht finden', None, 2, None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\testrepos\chromedriver, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:git.cmd:Popen(['git', 'rev-list', 'b2e804e977c9cf3dd9c845474752cac142a72508', '--'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\testrepos\chromedriver, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\testrepos\chromedriver, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\testrepos\gridfs_stream, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:git.cmd:Popen(['git', 'rev-list', '879f6e03bb4a0a31716b3cd7c31c03ce0ab7f638', '--'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\testrepos\gridfs_stream, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\testrepos\gridfs_stream, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\testrepos\videostreamer, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:git.cmd:Popen(['git', 'rev-list', '4bcf87e6a3db59e8d1663340a395e578000ba0ef', '--'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\testrepos\videostreamer, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\testrepos\videostreamer, universal_newlines=False, shell=None, istream=<valid stream>)
+INFO:root:Checking arguments
+INFO:root:Checking Base Directory
+INFO:root:getting and writting commits to csv file
+DEBUG:git.util:Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'Das System kann die angegebene Datei nicht finden', None, 2, None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\testrepos\chromedriver, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:git.cmd:Popen(['git', 'rev-list', 'b2e804e977c9cf3dd9c845474752cac142a72508', '--'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\testrepos\chromedriver, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\testrepos\chromedriver, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\testrepos\gridfs_stream, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:git.cmd:Popen(['git', 'rev-list', '879f6e03bb4a0a31716b3cd7c31c03ce0ab7f638', '--'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\testrepos\gridfs_stream, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\testrepos\gridfs_stream, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\testrepos\videostreamer, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:git.cmd:Popen(['git', 'rev-list', '4bcf87e6a3db59e8d1663340a395e578000ba0ef', '--'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\testrepos\videostreamer, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\testrepos\videostreamer, universal_newlines=False, shell=None, istream=<valid stream>)
+INFO:root:Checking arguments
+INFO:root:Checking Base Directory
+INFO:root:getting and writting commits to csv file
+DEBUG:git.util:Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'Das System kann die angegebene Datei nicht finden', None, 2, None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\testrepos\chromedriver, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:git.cmd:Popen(['git', 'rev-list', 'b2e804e977c9cf3dd9c845474752cac142a72508', '--'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\testrepos\chromedriver, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\testrepos\chromedriver, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\testrepos\gridfs_stream, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:git.cmd:Popen(['git', 'rev-list', '879f6e03bb4a0a31716b3cd7c31c03ce0ab7f638', '--'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\testrepos\gridfs_stream, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\testrepos\gridfs_stream, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\testrepos\videostreamer, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:git.cmd:Popen(['git', 'rev-list', '4bcf87e6a3db59e8d1663340a395e578000ba0ef', '--'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\testrepos\videostreamer, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch'], cwd=D:\M122\newScript\M122Scripting\projektarbeit\var\testrepos\videostreamer, universal_newlines=False, shell=None, istream=<valid stream>)
+INFO:git.cmd:Ignored error after process had died: OSError(9, 'Das Handle ist ungültig', None, 6, None)
+INFO:git.cmd:Ignored error after process had died: OSError(9, 'Das Handle ist ungültig', None, 6, None)
+INFO:git.cmd:Ignored error after process had died: OSError(9, 'Das Handle ist ungültig', None, 6, None)
+INFO:git.cmd:Ignored error after process had died: OSError(9, 'Das Handle ist ungültig', None, 6, None)
